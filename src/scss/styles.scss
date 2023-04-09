@@ -1,11 +1,24 @@
+// flex container => parent
 Ul {
     background-color: gray;
-    padding: 20px;
+    padding: 10px;
 
     display: flex;
+    // justify-content: center;
+    // display: inline-fle;
+    // 2-1
+    // flex-wrap: nowrap;
+
+    // flex-wrap: wrap;
+
+    flex-wrap: wrap-reverse;
+
 }
 
+/* flex chitdren */
+
 li{
+    // display: inline-block;
     list-style: none;
     color: white;
     background-color: blue;
