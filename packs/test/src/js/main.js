@@ -4,6 +4,6 @@ console.log('hello webpack');
 
 import img from '../img/img1.jpg';
 
-const myImage = new Image();
-
-e
+const imgJpg = document.createElement('img');
+imgJpg.src = img
+document.getElementById('box').appendChild(imgJpg)
