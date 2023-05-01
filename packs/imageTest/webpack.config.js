@@ -21,7 +21,10 @@ module.exports = {
                         loader: 'style-loader'
                     },
                     {
-                        loader: 'css-loader'
+                        loader: 'css-loader',
+                        options: {
+                            url: true,
+                        },
                     },
                     {
                         loader: 'postcss-loader',
@@ -39,15 +42,19 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(png|jpg|gif|svg)/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: 'img/[name].[ext]'
-                        }
-                    }
-                ]
+                test: /\.(png|jpg|gif|svg)$/i,
+                generator: {
+                    filename: 'img/[name][ext][query]'
+                },
+                type: 'asset/resource'
+                // use: [
+                //     {
+                //         loader: 'file-loader',
+                //         options: {
+                //             name: 'img/[name].[ext]'
+                //         }
+                //     }
+                // ]
             }
         ]
 
