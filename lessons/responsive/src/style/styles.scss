@@ -7,7 +7,19 @@
     min-width: 700px;
 }
 
-img{
-    width: 50vw;
-    height: 50vh;
+// img{
+//     width: 50vw;
+//     height: 50vh;
+//     // border: lightblue 0.2rem solid;
+//     // // object-fit: cover;
+//     // object-fit: contain;
+// }
+
+img:last-of-type{
+    // width: 50vmin;
+    width: 50vmax;
+
 }
+
+
+// resp
