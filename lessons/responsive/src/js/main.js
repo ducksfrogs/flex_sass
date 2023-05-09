@@ -2,7 +2,7 @@ import "../style/styles.scss";
 
 console.log('hello webpack') ;
 
-import img1 from '../img/ducklings.jpg';
+import img1 from '../img/img1.jpg';
 
 
 const imgOne = document.createElement('img');
