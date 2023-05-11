@@ -1,0 +1,80 @@
+/*reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/**********Utiliry comp ************/
+
+
+:root{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: #0f9b8e;
+    color: white;
+}
+
+p{
+    font-size: 1.5rem;
+    margin:  0.5rem 0;
+}
+
+/* icons */
+i{
+    font-size:  5rem;
+}
+
+/* super */
+sup{
+    font-size: 0.8rem;
+}
+
+::selection{
+    color: #fcc006;
+    background-color: #ff7052;
+}
+
+
+/****************************** main ********************/
+
+section#weather {
+    margin: 2rem auto 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 6rem;
+    letter-spacing: 0.4rem;
+    font-weight: 300;
+}
+
+/* weainfo temp*/ 
+div.weather__info__temp{
+    padding: 4rem;
+}
+
+div.weather__info{
+    display: flex;
+
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding: 4rem;
+    margin: 5rem;
+}
+
+/* weather temp container */
+
+div.weather__temp{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+span.aws {
+    font-size: 5rem;
+}
