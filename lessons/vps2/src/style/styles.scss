@@ -31,5 +31,20 @@ h1{
 
 p {
     color: antiquewhite;
+}
 
+a{
+    color: white;
+    text-decoration: none;
+    border: 1px white solid;
+    border-radius: 5px;
+    padding: 12px 24px;
+    margin-top: 40px;
+
+    transition: all 0.35s ease-in-out;
+}
+
+a:hover {
+    color: indigo;
+    background-color: white;
 }
