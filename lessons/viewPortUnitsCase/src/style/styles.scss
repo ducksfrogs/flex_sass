@@ -10,6 +10,14 @@ header{
     justify-content: center;
     align-items: center;
 
-    padding: 80px;
+    // padding: 80px;
+    // padding: 10vh 5vw;
+
+    padding: calc(4px + 2vh) calc(4px + 2vw);
+
 }
 
+
+p{
+    margin-bottom: 3vh;
+}
