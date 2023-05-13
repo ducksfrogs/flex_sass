@@ -37,6 +37,13 @@ module.exports = {
                         loader: 'sass-loader'
                     }
                 ]
+            },
+            {
+                test: /\.(png|jpg|gif|svg)$/i,
+                generator: {
+                    filename: 'img/[name][ext][query]'
+                },
+                type: 'asset/resource'
             }
         ]
 
