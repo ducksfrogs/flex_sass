@@ -58,9 +58,33 @@ div.side-nav__content{
     background-color: var(--primary-color);
 }
 
-div.side-nav__content--logo {
-    width: calc(3vw + 3vh);
+// div.side-nav__content--logo {
+//     width: calc(3vw + 3vh);
 
 
-    // object-fit: cover;
+//     // object-fit: cover;
+// }
+
+ul.side-nav__content--social{
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    a i{
+        font-size: calc(1rem + 0.6667vw);
+        color: white;
+
+        padding-bottom: calc(2rem + 0.6667vw);
+
+        transition: color 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55&);
+
+        &:hover,
+        &:active{
+            color: var(--secondary-color);
+        }
+    }
 }
+
