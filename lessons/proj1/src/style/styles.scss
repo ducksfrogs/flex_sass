@@ -237,5 +237,8 @@ ul.header__main-nav--links li{
             margin-left: 6vw;
         }
     }
+    .clicked .line-1{
+        transform: rotate(-45deg);
+    }
     
 }
