@@ -14,6 +14,8 @@ const hamburber = document.querySelector('.header__main-nav--hamburger');
 const links = document.querySelectorAll('.header__main-nav--links li');
 
 hamburber.addEventListener('click', () => {
-    console.log('you clicked');
     hamburberContainer.classList.toggle("clicked");
+    // links.forEach(link) => {
+    //     link.classList.toggle('fade');
+    // }
 });

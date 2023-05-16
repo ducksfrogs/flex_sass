@@ -12,7 +12,6 @@
     }
 }
 
-
 /********  Utilities ***(*****/
 
 
@@ -92,7 +91,6 @@ ul.side-nav__content--social{
 
 li{
     list-style: none;
-
 }
 
 a:link,
@@ -115,7 +113,6 @@ header#header{
     height: calc(3vw + 3vh);
 
     z-index: 2;
-
 }
 
 nav#header__main-nav{
@@ -124,7 +121,6 @@ nav#header__main-nav{
 
 ul.header__main-nav--links{
     // background-color: aqua;
-
     width: 100%;
     height: 100%;
 
@@ -154,7 +150,6 @@ ul.header__main-nav--links li{
 
             transform: scaleX(0);
             transition: transform 0.6s cubic-bezier(1, 0, 0, 1);
-
         }
 
         &:link::before,
@@ -184,9 +179,9 @@ ul.header__main-nav--links li{
 
 @media screen and (max-width: 610px) {
     /***** main nav ****/
-    // header#header {
-    //     position: absolute;
-    // }
+    header#header {
+      position: absolute;
+    }
     nav#header__main-nav{
         width: 30rem;
         height: 100%;
@@ -205,7 +200,7 @@ ul.header__main-nav--links li{
         width: 5rem;
         height: 5rem;
         position: fixed;
-        top: 2rem;
+        top: 1.5rem;
         right: 3rem;
         cursor: pointer;
         background-color: var(--secondary-color);
@@ -223,8 +218,6 @@ ul.header__main-nav--links li{
         background-color: white;
         border-radius: 0.2rem;
         transition: all 0.4s ease-in-out;
-
-
     }
 
     ul.header__main-nav--links{
@@ -237,8 +230,34 @@ ul.header__main-nav--links li{
             margin-left: 6vw;
         }
     }
-    .clicked .line-1{
-        transform: rotate(-45deg);
+    .clicked {
+        .line-1{
+                transform: rotateZ(-405deg) translate(-0.8rem, 0.6rem);
+            }
+        .line-2{
+                opacity: 0;
+            }
+        .line-3{
+                transform: rotateZ(405deg) translate(-0.8rem, -0.6rem);
+            }
+    }
+
+    ul.header__main-nav--links li{
+        opacity: 0;
+    }
+
+    ul.header__main-nav--links li:nth-child(1){
+            transition: all 0.5s ease-in-out 0.2s;
     }
     
+    ul.header__main-nav--links li:nth-child(2){
+            transition: all 0.5s ease-in-out 0.2s;
+    }
+
+    ul.header__main-nav--links li.fade{
+        opacity: 1;
+    }
+
+
+
 }
