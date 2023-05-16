@@ -197,6 +197,7 @@ div.showcase__content{
     justify-content: space-between;
 
     animation: hero 2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
 }
 
 @keyframes hero {
@@ -207,7 +208,7 @@ div.showcase__content{
 
     100%{
         transform: translateX(0);
-        opacity: 1;
+        opacity: 0.8;
     }
 }
 
@@ -265,6 +266,7 @@ div.showcase__content{
     section#showcase{
         background-position: 100%;
         align-items: flex-end;
+        
     }
 }
 
