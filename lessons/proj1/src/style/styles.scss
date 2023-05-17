@@ -261,6 +261,25 @@ div.showcase__content{
 
 }
 
+/********work section  *************/
+
+section#work{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--primary-color);
+}
+
+div.work__card{
+    padding: 2rem;
+    flex-basis: 40rem;
+}
+
+div.work__card img{
+    height: 100%;
+    width: 100%;
+}
+
 /***** media quert 900px*******/
 @media screen and (max-width: 900px){
     section#showcase{
