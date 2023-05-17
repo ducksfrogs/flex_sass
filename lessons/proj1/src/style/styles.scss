@@ -281,6 +281,7 @@ div.work__card{
 div.work__card img{
     height: 100%;
     width: 100%;
+    // align-self: flex-start;
 
     transition:  filter 0.45s ease;
 }
@@ -290,6 +291,18 @@ div.work__card img:active{
     filter: sepia(80%);
 }
 
+
+/***** About me sec*******/
+section#about-me{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    padding: 2rem;
+    background-color: var(--secondary-color);
+
+}
 /***** media quert 900px*******/
 @media screen and (max-width: 900px){
     section#showcase{
