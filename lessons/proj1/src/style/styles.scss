@@ -273,11 +273,21 @@ section#work{
 div.work__card{
     padding: 2rem;
     flex-basis: 40rem;
+    flex-grow: 1;
+
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 20% 100%, 0% 80%, 0% 20% );
 }
 
 div.work__card img{
     height: 100%;
     width: 100%;
+
+    transition:  filter 0.45s ease;
+}
+
+div.work__card img:hover,
+div.work__card img:active{
+    filter: sepia(80%);
 }
 
 /***** media quert 900px*******/
@@ -288,6 +298,7 @@ div.work__card img{
         
     }
 }
+
 
 /***** media quert *******/
 
