@@ -1,0 +1,37 @@
+.grid-container{
+    background-color: #ff7634;
+    display: grid;
+
+    // grid-template-rows: 150px 150px 150px;
+    gap: 25px;
+
+    // grid-template-columns: repeat(4, 150px);
+    // grid-template-rows: repeat(3, 150px);
+
+    // The FR unit
+    // propertiy value
+
+    grid-template-columns: repeat(3, 150px) 1fr;
+    // grid-template-columns: repeat(3, 150px) 0.5fr;
+    // grid-template-columns: 1fr 2fr 3fr 4fr;
+    // grid-template-columns: 150px 1fr 50% 1fr;
+    height: 600px;
+    grid-template-rows: repeat(3, 1fr);
+
+    
+    // gap: 50px;
+}
+
+
+.tw-grid-container{
+    background-color: magenta;
+    display: grid;
+
+    grid-template-columns: 150px 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px;
+
+}
+
+.item{
+    background-color: #fcc006;
+}
