@@ -1,0 +1,38 @@
+.grid-container{
+    background-color: #ff7634;
+    display: grid;
+
+    /* grid propaties */
+    /* values can be
+                <track-size>(length, percentages, viewport units or fractions) 
+                <line-name> (an arbiraray name of your choosing) */
+
+    // grid-template-rows: 150px 150px 250px 5rem;
+
+    // grid-template-columns: 150px 150px;
+    
+}
+
+
+.tw-grid-container{
+    background-color: magenta;
+    display: grid;
+
+    grid-template-columns: 150px 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px;
+
+    // old
+    // grid-column-gap: 10px;
+    // grid-column-gap: 1.5rem;
+    grid-column-gap: 3vw;
+    // grid-column-gap: 5%;
+
+    // column-gap: 10px;
+    // column-gap: 1.5rem;
+
+    row-gap: 10px;
+}
+
+.item{
+    background-color: #ff756f;
+}
