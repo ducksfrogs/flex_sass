@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/******* Utilyty comp *********/
+
+:root{
+    font-size: 62.5%;
+
+    /*    custom */
+    /****** colors ****************/
+    --color-primary: #730039;
+    --color-primary-m-light: hsla(330, 100%, 23%, 0.55); 
+    --color-primary-m-dark: hsla(330, 100%, 23%, 0.85); 
+    
+    --color-scandary: #ffc513;
+    --color-scandary-m-light: hsla(45, 100%, 54%, 0.55);
+    --color-scandary-m-light: hsla(45, 100%, 54%, 0.85);
+
+    --color-tertialy: #ff724c;
+    --color-tertialy: hsla(13, 100%, 65%, 0.55);
+    --color-tertialy-m-light: hsla(13, 100%, 65%, 0.55);
+    --color-tertialy-m-light: hsla(13, 100%, 65%, 0.85);
+    
+    --color-quatermary: #f6eedf; 
+    --color-quatermary: hsl(39, 56%, 92%); 
+    --color-quatermary-m-light: hsla(39, 56%, 92%, 0.55);
+    --color-quatermary-m-light: hsla(39, 56%, 92%, 0.85);
+
+    --transition-duration: 0.3s;
+
+    --font-size-title: calc(2rem + 2vw);
+    --padding-section: 8vh 3vw;
+}
