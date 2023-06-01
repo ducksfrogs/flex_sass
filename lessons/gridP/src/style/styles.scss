@@ -46,5 +46,14 @@ body{
 
 .container{
     display: grid;
-    grid-template-columns: 1fr repeat(10, minmax(min-content, 11rem)) 1fr;
+    grid-template-columns: [container-start] 
+                            1fr 
+                            [center-start]
+                            repeat(10, 
+                            [col-start]
+                            minmax(min-content, 11rem)
+                            [col-end])
+                            [center-end]
+                            1fr
+                            [container-ednd];
 }
