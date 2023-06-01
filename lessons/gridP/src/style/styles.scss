@@ -56,4 +56,26 @@ body{
                             [center-end]
                             1fr
                             [container-ednd];
+    grid-template-rows: 100vh repeat(8, min-content);
+}
+
+.container > * {
+    font-size: 5rem;
+}
+
+/* main styling */
+
+header#header{
+    background-color: var(--primary-color);
+    grid-column: container-start / container-end;
+}
+
+section#booking-content{
+    background-color: var(--secondary-color);
+    grid-column: center-start / col-end 6;
+}
+
+section#booking-date{
+    background-color: var(--tertiary-color);
+    grid-column: col-start 7 / center-end ;
 }
