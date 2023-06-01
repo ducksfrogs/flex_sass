@@ -26,8 +26,8 @@
     --tertiary-color-m-dark: hsla(13, 100%, 65%, 0.85);
 
     --quaternary-color: #f6eedf;
-    --quaternary-color-m-light: hsls(39, 56%, 92%, 0.55);
-    --quaternary-color-m-dark: hsls(39, 56%, 92%, 0.85);
+    --quaternary-color-m-light: hsla(39, 56%, 92%, 0.55);
+    --quaternary-color-m-dark: hsla(39, 56%, 92%, 0.85);
 
     /* transition duration */
     --transition-duration: 0.3s;
@@ -46,5 +46,5 @@ body{
 
 .container{
     display: grid;
-    grid-template-columns: 1fr repeat(10, minmax(mix-content, 11rem)) 1fr;
+    grid-template-columns: 1fr repeat(10, minmax(min-content, 11rem)) 1fr;
 }
