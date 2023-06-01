@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/********  Utilities ***(*****/
+
+:root{
+    font-size: 62.5%;
+
+    /* custom propaties */
+
+    --primary-color: #730039;
+    --primary-color-m-light: hsla(330, 100%, 23%, 0.55);
+    --primary-color-m-dark: hsla(330, 100%, 23%, 0.85);
+
+    --secondary-color: #ffc513;
+    --secondary-color-m-light: hsla(45, 100%, 54%, 0.55);
+    --secondary-color-m-dark: rgba(255, 196, 20, 0.88);
+
+    --tertiary-color: hsl(13, 100%, 65%);
+    --tertiary-color-m-light: hsla(13, 100%, 65%, 0.55);
+    --tertiary-color-m-dark: hsla(13, 100%, 65%, 0.85);
+
+    --quaternary-color: #f6eedf;
+    --quaternary-color-m-light: hsls(39, 56%, 92%, 0.55);
+    --quaternary-color-m-dark: hsls(39, 56%, 92%, 0.85);
+
+    /* transition duration */
+    --transition-duration: 0.3s;
+
+    /* section Title font size */
+    --font-size-title: calc(2rem + 2vw);
+
+    /* section padding */
+    --padding-section: 8vh 3vw;
+}
+
+body{
+    line-height: 1.7;
+    background-color: var(--quaternary-color);
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr repeat(10, minmax(mix-content, 11rem)) 1fr;
+}
