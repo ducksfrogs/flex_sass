@@ -1,4 +1,13 @@
 .grid-container{
     background-color: #f3f;
     display: grid;
+
+    grid-template-rows: 150px 150px 250px 50px;
+
+    grid-template-columns: 150px 150px;
+}
+
+
+.item{
+    background-color: #fcc005;
 }
