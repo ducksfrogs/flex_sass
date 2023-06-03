@@ -60,7 +60,7 @@ body{
 }
 
 .container > * {
-    font-size: 5rem;
+    font-size: 2rem;
 }
 
 /* main styling */
@@ -73,9 +73,34 @@ header#header{
 section#booking-content{
     background-color: var(--secondary-color);
     grid-column: center-start / col-end 6;
+    height: 400px;
 }
 
 section#booking-date{
     background-color: var(--tertiary-color);
     grid-column: col-start 7 / center-end ;
+    height: 400px;
+}
+
+
+/* villa */
+
+section#villas {
+    background-color: var(--primary-color);
+    grid-column: container-start / container-end;
+    height: 400px;
+}
+
+
+section#motto {
+    background-color: var(--secondary-color);
+    grid-column: container-start / container-end;
+    height: 400px;
+}
+
+section#events-content{
+    background-color: var(--primary-color);
+    grid-column: container-start /col-end 9;
+    height: 400px;
+
 }
