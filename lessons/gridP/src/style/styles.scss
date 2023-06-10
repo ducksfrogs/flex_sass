@@ -104,3 +104,37 @@ section#events-content{
     height: 400px;
 
 }
+
+section#events-content{
+    background-color: var(--quaternary-color);
+    grid-column: container-start / col-end 9;
+}
+
+section#events-date{
+    background-color: var(--primary-color);
+    grid-column: col-start 10 / center-end;
+}
+
+
+
+section#gallery-text{
+    background-color: var(--quaternary-color);
+    grid-column: center-start / col-end 1;
+}
+
+section#gallery-carousel{
+    background-color: var(--primary-color-m-light);
+    grid-column: col-start 2 / container-end;
+}
+
+
+
+section#features-content{
+    background-color: var(--quaternary-color);
+    grid-column: container-start / col-end 9;
+}
+
+section#features-text{
+    background-color: var(--primary-color);
+    grid-column: col-start 10 / center-end;
+}
