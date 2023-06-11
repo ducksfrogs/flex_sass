@@ -62,12 +62,78 @@ body{
 .container > * {
     font-size: 2rem;
 }
+a:link,
+a:visited{
+    color: var(--quaternary-color);
+    text-decoration: none;
+    font-size: calc( 0.5rem + 1vw);
+    padding: 1rem 2rem;
+    border-radius: 0.3rem;
+    position: relative;
+    transition: all var(--transition-duration) cubic-bezier(1, 0, 0, 1);
+    z-index: 1;
+}
+
+p{
+    color: white;
+    font-size: calc(1rem + 1vw);
+    font-weight: 300;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 4rem;
+}
+
+i {
+    font-size: var(--font-size-title);
+    color: var(--secondary-color);
+}
 
 /* main styling */
 
 header#header{
     background-color: var(--primary-color);
     grid-column: container-start / container-end;
+    background: linear-gradient(
+        var(--primary-color-m-light),
+        var(--primary-color-m-light)
+    ), url('../img/img4.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.header__main-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+}
+
+.header__main-nav input[type=checkbox] {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    height: 5rem;
+    width: 5rem;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+// hamberger
+
+.header__main-nav--hamberger{
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    height: 5rem;
+    width: 5rem;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    z-index: 2;
 }
 
 section#booking-content{
@@ -137,4 +203,17 @@ section#features-content{
 section#features-text{
     background-color: var(--primary-color);
     grid-column: col-start 10 / center-end;
+    height: 400px;
+}
+
+section#testmonials{
+    background-color: var(--tertiary-color);
+    grid-column: center-start / center-end;
+    height: 400px;
+}
+
+footer#footer{
+    background-color: var(--primary-color);
+    grid-column: container-start / container-end;
+    height: 400px;
 }
