@@ -296,15 +296,34 @@ header#header{
 
 .header__logo__content--logo{
     grid-column: 2 / 3;
+    letter-spacing: 0.002rem;
 
 }
+
+.header__logo__content--logo span{
+    color: var(--tertiary-color);
+    font-size: 3rem;
+}
+
 
 .header__logo__content--content{
     grid-column: 1 / -1;
+    align-self: center;
 }
 
+.header__logo__content--content__title{
+    font-size: calc(4rem + 4vw);
+    font-weight: 300;
+    color: white;
+    text-transform: uppercase;
+    padding: 0 2rem;
+}
 
-
+.header__logo__content__para{
+    font-size: calc(1rem + 2vw);
+    font-weight: 300;
+    padding: 2vh 2rem 6vh var(--font-size-title);
+}
 section#booking-content{
     background-color: var(--secondary-color);
     grid-column: center-start / col-end 6;
