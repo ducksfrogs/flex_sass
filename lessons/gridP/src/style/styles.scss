@@ -309,6 +309,7 @@ header#header{
 .header__logo__content--content{
     grid-column: 1 / -1;
     align-self: center;
+    // text-align: center;
 }
 
 .header__logo__content--content__title{
@@ -325,6 +326,29 @@ header#header{
     padding: 2vh 2rem 6vh var(--font-size-title);
 }
 
+.header__logo__content--content__link:link,
+.header__logo__content--content__link:visited{
+    margin-left: var(--font-size-title);
+    border: 0.2rem solid var(--tertiary-color);
+}
+
+.header__logo__content--content__link:link::before,
+.header__logo__content--content__link:visited::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--tertiary-color);
+    transform: scaleX(0);
+    transition: transform 0.45s cubic-bezier(1, 0, 0, 1);
+    z-index: -1;
+}
+.header__logo__content--content__link:hover::before,
+.header__logo__content--content__link:active::before{
+    transform: scaleX(1);
+}
 section#booking-content{
     background-color: var(--secondary-color);
     grid-column: center-start / col-end 6;
