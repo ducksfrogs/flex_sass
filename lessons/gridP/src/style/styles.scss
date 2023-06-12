@@ -316,14 +316,15 @@ header#header{
     font-weight: 300;
     color: white;
     text-transform: uppercase;
-    padding: 0 2rem;
+    padding: 0 2rem 0 var(--font-size-title);
 }
 
-.header__logo__content__para{
+.header__logo__content--content__para{
     font-size: calc(1rem + 2vw);
     font-weight: 300;
     padding: 2vh 2rem 6vh var(--font-size-title);
 }
+
 section#booking-content{
     background-color: var(--secondary-color);
     grid-column: center-start / col-end 6;
