@@ -393,12 +393,20 @@ section#booking-content p{
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
 }
 
 
 
-
-
+.booking-content__icons--weather,
+.booking-content__icons--time{
+    // display: flex;
+    // justify-content: space-between;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 10vh;
+    place-items: center;
+}
 
 
 
