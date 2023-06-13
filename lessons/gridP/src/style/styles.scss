@@ -413,10 +413,35 @@ section#booking-content p{
 
 
 section#booking-date{
+    background-color: var(--secondary-color);
     grid-column: col-start 7 / center-end ;
     padding: var(--padding-section);
+
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
 }
 
+.booking-date__schedule{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2vw;
+    place-items: center;
+}
+
+.booking-date__schedule--arraival,
+.booking-date__schedule--departure,
+.booking-date__schedule--guest{
+    display: grid;
+    grid-row-gap: 3vh;
+}
+
+.booking-date__schedule--arraival h5,
+.booking-date__schedule--departure h5,
+.booking-date__schedule--guest h5{
+    font-size: calc(1rem + 1vw);
+    text-align: center;
+
+}
 
 /* villa */
 
