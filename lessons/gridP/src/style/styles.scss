@@ -413,7 +413,6 @@ section#booking-content p{
 
 
 section#booking-date{
-    background-color: var(--secondary-color);
     grid-column: col-start 7 / center-end ;
     padding: var(--padding-section);
 
@@ -440,9 +439,62 @@ section#booking-date{
 .booking-date__schedule--guest h5{
     font-size: calc(1rem + 1vw);
     text-align: center;
-
 }
 
+.booking-date__schedule--arraival > div,
+.booking-date__schedule--departure > div,
+.booking-date__schedule--guest > div{
+    background-color: var(--secondary-color);
+    padding: 2rem 4rem ;
+
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    place-items: center;
+    position: relative;
+}
+
+.booking-date__schedule--arraival > div::before,
+.booking-date__schedule--departure > div::before,
+.booking-date__schedule--guest > div::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    border-width: 1.5rem;
+    margin-left: -1.5rem;
+    border-style: solid;
+    border-color: transparent transparent var(--secondary-color);
+}
+
+.booking-date__schedule--arraival > div p:nth-of-type(2),
+.booking-date__schedule--departure > div p:nth-of-type(2),
+.booking-date__schedule--guest > div p:nth-of-type(2) {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.booking-date__contact {
+    align-self: end;
+}
+
+.booking-date__contact--link:link,
+.booking-date__contact--link:visited{
+    background-color: var(--secondary-color);
+    color: white;
+    transition: all var(--transition-duration) ease-in-out;
+}
+
+.booking-date__contact--link:hover,
+.booking-date__contact--link:active{
+    color: var(--secondary-color);
+    background-color: white;
+    border: 0.1rem var(--secondary-color) solid;
+}
+
+.booking-date__contact p:first-of-type {
+    margin-top: 4rem;
+
+}
 /* villa */
 
 section#villas {
