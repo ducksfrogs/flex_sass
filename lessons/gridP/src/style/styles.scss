@@ -152,7 +152,7 @@ header#header{
     }
 }
 
-/************************* hamberger lines **********************/
+/************************* hamberger lines *********************/
 .header__main-nav--hamberger > div{
     position: relative;
     height: 0.3rem;
@@ -356,7 +356,7 @@ header#header{
 
 section#booking-content{
     grid-column: center-start / col-end 6;
-    position: var(--padding-section);
+    padding: var(--padding-section);
 
     display: grid;
     grid-template-rows: repeat(3, max-content);
@@ -405,19 +405,16 @@ section#booking-content p{
     display: grid;
     grid-template-columns: 0.5fr 1fr;
     grid-template-rows: 10vh;
-    place-items: center;
+    // place-items: center;
+    justify-items: start;
+    align-items: center;
 }
 
 
 
-
-
-
-
 section#booking-date{
-    background-color: var(--tertiary-color);
     grid-column: col-start 7 / center-end ;
-    height: 400px;
+    padding: var(--padding-section);
 }
 
 
