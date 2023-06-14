@@ -76,6 +76,7 @@ a:visited{
 
 p{
     color: white;
+    // color: var(--secondary-color-m-dark);
     font-size: calc(1rem + 1vw);
     font-weight: 300;
 }
@@ -134,21 +135,380 @@ header#header{
     padding: 1rem;
     background-color: var(--secondary-color);
     z-index: 2;
+    
+    display: grid;
+    place-items: center;
+    
+    animation: main-nav 2s;
 }
+
+@keyframes main-nav {
+    0%{
+        transform: translateX(150rem) rotate(1800deg);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0) rotate(0);
+        opacity: 1;
+    }
+}
+
+/************************* hamberger lines *********************/
+.header__main-nav--hamberger > div{
+    position: relative;
+    height: 0.3rem;
+    width: 100%;
+
+    background-color: var(--quaternary-color);
+    display: grid;
+    place-items: center;
+    transition: all var(--transition-duration) ease-in-out;
+
+}
+
+.header__main-nav--hamberger > div::before,
+.header__main-nav--hamberger > div::after{
+    content: '';
+    position: absolute;
+    top: -1rem;
+    width: 60%;
+    height: inherit;
+    background-color: inherit;
+    z-index: 2;
+}
+
+.header__main-nav--hamberger > div::before{
+    left: 0;
+}
+
+.header__main-nav--hamberger > div::after{
+    top: 1rem;
+    right: 0;
+}
+
+/* rotating menu */
+.header__main-nav input[type="checkbox"]:checked + 
+.header__main-nav--hamberger > div{
+    transform: rotate(135deg);
+}
+
+
+.header__main-nav input[type=checkbox]:checked + 
+.header__main-nav--hamberger > div::before{
+    left: 0;
+    top: 0;
+    width: 100%;
+    transform: rotate(270deg);
+    
+}
+
+.header__main-nav input[type=checkbox]:checked + 
+.header__main-nav--hamberger > div::after{
+    opacity: 0;
+    
+}
+
+.header__main-nav input[type="checkbox"]:checked:hover
++ .header__main-nav--hamberger > div {
+    transform: rotate(465deg);
+}
+
+.header__main-nav--menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+    overflow: hidden;
+
+    display: grid;
+    place-items: center;
+}
+
+.header__main-nav--menu > div {
+    background-color: var(--secondary-color-m-dark);
+    height: 200%;
+    width: 200%;
+
+    display: grid;
+    place-items: center;
+    transform: scaleX(0);
+    transition: all var(--transition-duration) ease-in-out;
+}
+
+.header__main-nav--menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.header__main-nav input[type="checkbox"]:checked ~ .header__main-nav--menu {
+    visibility: visible;
+}
+
+.header__main-nav input[type="checkbox"]:checked
+     ~ .header__main-nav--menu  > div {
+    transform: scaleX(1);
+    transition-duration: 0.5s;
+}
+
+.header__main-nav input[type="checkbox"]:checked
+     ~ .header__main-nav--menu  > div > div {
+        opacity: 1;
+}
+
+.header__main-nav--menu ul li a:link,
+.header__main-nav--menu ul li a:visited{
+    z-index: 5;
+    font-size: calc(1.5rem + 0.5vw);
+}
+
+.header__main-nav--menu ul li a:link::before,
+.header__main-nav--menu ul li a:visited::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
+    transform: scaleY(0);
+    background-color: var(--primary-color-m-dark);
+
+}
+
+.header__main-nav--menu ul li a:hover::before,
+.header__main-nav--menu ul li a:active::before{
+    transform: scaleY(1);
+}
+
+
+.header__logo__content{
+    display: grid;
+    grid-template-columns: 1fr minmax(30rem, 1fr) 1fr;
+    grid-template-rows: min-content;
+    height: 90%;
+    justify-items: center;
+}
+
+
+.header__logo__content--logo{
+    grid-column: 2 / 3;
+    letter-spacing: 0.002rem;
+
+}
+
+.header__logo__content--logo span{
+    color: var(--tertiary-color);
+    font-size: 3rem;
+}
+
+
+.header__logo__content--content{
+    grid-column: 1 / -1;
+    align-self: center;
+    // text-align: center;
+}
+
+.header__logo__content--content__title{
+    font-size: calc(4rem + 4vw);
+    font-weight: 300;
+    color: white;
+    text-transform: uppercase;
+    padding: 0 2rem 0 var(--font-size-title);
+}
+
+.header__logo__content--content__para{
+    font-size: calc(1rem + 2vw);
+    font-weight: 300;
+    padding: 2vh 2rem 6vh var(--font-size-title);
+}
+
+.header__logo__content--content__link:link,
+.header__logo__content--content__link:visited{
+    margin-left: var(--font-size-title);
+    border: 0.2rem solid var(--tertiary-color);
+}
+
+.header__logo__content--content__link:link::before,
+.header__logo__content--content__link:visited::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--tertiary-color);
+    transform: scaleX(0);
+    transition: transform 0.45s cubic-bezier(1, 0, 0, 1);
+    z-index: -1;
+}
+.header__logo__content--content__link:hover::before,
+.header__logo__content--content__link:active::before{
+    transform: scaleX(1);
+}
+
+
+
+/* booking section */
 
 section#booking-content{
-    background-color: var(--secondary-color);
     grid-column: center-start / col-end 6;
-    height: 400px;
+    padding: var(--padding-section);
+
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
+    grid-gap: 2vh;
 }
+
+section#booking-content p{
+    color: var(--primary-color);
+}
+
+.booking-content__title{
+    font-size: var(--font-size-title);
+    position: 0 2rem 1rem;
+    font-weight: 300;
+    position: relative;
+}
+
+.booking-content__title::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    height: 0.2rem;
+    width: 30%;
+    background-color: var(--secondary-color);
+}
+
+.booking-content__para{
+    padding: 2rem;
+}
+
+section#booking-content p{
+    color: var(--primary-color);
+}
+
+.booking-content__icons{
+    margin-left: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+}
+
+
+
+.booking-content__icons--weather,
+.booking-content__icons--time{
+    // display: flex;
+    // justify-content: space-between;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 10vh;
+    // place-items: center;
+    justify-items: start;
+    align-items: center;
+}
+
+
 
 section#booking-date{
-    background-color: var(--tertiary-color);
     grid-column: col-start 7 / center-end ;
-    height: 400px;
+    padding: var(--padding-section);
+
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
 }
 
+section#booking-date p {
+    color: var(--primary-color);
+}
+.booking-date__schedule{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2vw;
+    place-items: center;
+}
 
+.booking-date__schedule--arraival,
+.booking-date__schedule--departure,
+.booking-date__schedule--guest{
+    display: grid;
+    grid-row-gap: 3vh;
+}
+
+.booking-date__schedule--arraival h5,
+.booking-date__schedule--departure h5,
+.booking-date__schedule--guest h5{
+    font-size: calc(1rem + 1vw);
+    text-align: center;
+}
+
+.booking-date__schedule--arraival > div,
+.booking-date__schedule--departure > div,
+.booking-date__schedule--guest > div{
+    background-color: var(--secondary-color);
+    padding: 2rem 4rem ;
+
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    place-items: center;
+    position: relative;
+}
+
+.booking-date__schedule--arraival > div::before,
+.booking-date__schedule--departure > div::before,
+.booking-date__schedule--guest > div::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    border-width: 1.5rem;
+    margin-left: -1.5rem;
+    border-style: solid;
+    border-color: transparent transparent var(--secondary-color);
+}
+
+.booking-date__schedule--arraival > div p:nth-of-type(2),
+.booking-date__schedule--departure > div p:nth-of-type(2),
+.booking-date__schedule--guest > div p:nth-of-type(2) {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.booking-date__contact {
+    align-self: end;
+}
+
+.booking-date__contact--link:link,
+.booking-date__contact--link:visited{
+    background-color: var(--secondary-color);
+    color: white;
+    transition: all var(--transition-duration) ease-in-out;
+}
+
+.booking-date__contact--link:hover,
+.booking-date__contact--link:active{
+    color: var(--secondary-color);
+    background-color: white;
+    border: 0.1rem var(--secondary-color) solid;
+}
+
+.booking-date__contact p:first-of-type {
+    margin-top: 4rem;
+
+}
+
+.booking-date__contact p:first-of-type,
+.booking-date__contact p:nth-of-type(2),
+.booking-date__contact p:nth-of-type(3){
+    font-size: 2rem;
+}
 /* villa */
 
 section#villas {
@@ -180,6 +540,7 @@ section#events-date{
     background-color: var(--primary-color);
     grid-column: col-start 10 / center-end;
 }
+
 
 
 
@@ -216,4 +577,87 @@ footer#footer{
     background-color: var(--primary-color);
     grid-column: container-start / container-end;
     height: 400px;
+}
+
+
+/************************ media querys ****************************/
+/***** 1000px ******/
+
+@media  screen and (max-width: 1000px) {
+    a:link,
+    a:visited{
+        font-size:  calc(1rem + 1vw);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    /* booking content */
+    section#booking-content{
+        padding: 4vh;
+        grid-column:  center-start / center-end;
+    }
+
+    .booking-content__title{
+        text-align: center;
+    }
+
+    .booking-content__title::after{
+        width: 20%;
+        left: 40%;
+    }
+
+    
+    /* booking date */
+    section#booking-date{
+        padding: 4vh;
+        grid-column:  center-start / center-end;
+        grid-gap: 7vh;
+    }
+
+    .booking-date__schedule--arraival > div,
+    .booking-date__schedule--departure > div,
+    .booking-date__schedule--guest > div{
+        padding: 2rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: min-content;
+        grid-column-gap: 2vw;
+        place-items: center;
+    }
+}
+
+/******* 600px *******/
+@media  screen and (max-width: 600px) {
+    .header__logo__content--content__para{
+        font-size: 2rem;
+    }
+    section#booking-date{
+        grid-template-rows: repeat(2, max-content);
+    }
+
+    .booking-date__schedule--arraival > div,
+    .booking-date__schedule--departure > div,
+    .booking-date__schedule--guest > div{
+        padding: 4rem;
+        grid-template-columns: min-content; 
+
+    }
+    /* booking content */
+    .booking-content__para{
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .booking-date__schedule{
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: auto;
+        grid-row-gap: 4vh;
+    }
+
+    .booking-date__contact{
+        // text-align: center;
+        justify-content: center;
+        padding: 0 2rem;
+    }
+    
 }
