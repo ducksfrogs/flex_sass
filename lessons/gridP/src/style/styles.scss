@@ -76,6 +76,7 @@ a:visited{
 
 p{
     color: white;
+    // color: var(--secondary-color-m-dark);
     font-size: calc(1rem + 1vw);
     font-weight: 300;
 }
@@ -363,6 +364,10 @@ section#booking-content{
     grid-gap: 2vh;
 }
 
+section#booking-content p{
+    color: var(--primary-color);
+}
+
 .booking-content__title{
     font-size: var(--font-size-title);
     position: 0 2rem 1rem;
@@ -420,6 +425,9 @@ section#booking-date{
     grid-template-rows: repeat(2, 1fr);
 }
 
+section#booking-date p {
+    color: var(--primary-color);
+}
 .booking-date__schedule{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -494,6 +502,12 @@ section#booking-date{
 .booking-date__contact p:first-of-type {
     margin-top: 4rem;
 
+}
+
+.booking-date__contact p:first-of-type,
+.booking-date__contact p:nth-of-type(2),
+.booking-date__contact p:nth-of-type(3){
+    font-size: 2rem;
 }
 /* villa */
 
