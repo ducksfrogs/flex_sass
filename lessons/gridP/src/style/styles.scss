@@ -33,7 +33,7 @@
     --transition-duration: 0.3s;
 
     /* section Title font size */
-    --font-size-title: calc(2rem + 2vw);
+    --font-size-title: calc(1rem + 2vw);
 
     /* section padding */
     --padding-section: 8vh 3vw;
@@ -512,10 +512,38 @@ section#booking-date p {
 /* villa */
 
 section#villas {
-    background-color: var(--primary-color);
     grid-column: container-start / container-end;
-    height: 400px;
+    background-color: var(--primary-color);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    grid-gap: 2rem;
 }
+
+/* carot */
+
+div[class^=villas]{
+    padding: 2rem;
+    // background-position: center;
+    // background-size: cover;
+    transition: transform var(--transition-duration) ease-in-out;
+}
+
+div[class^=villas]:hover,
+div[class^=villas]:active{
+    transform: scale(1.05);
+}
+
+div[class^=villas] h2[class^=villas]{
+    font-size: var(--font-size-title);
+    padding: 0 2rem 1rem;
+    font-weight: 400;
+    color: white;
+    text-transform: uppercase;
+}
+
+
+// .villa__villa-1,
 
 
 section#motto {
