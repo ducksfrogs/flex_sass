@@ -590,6 +590,30 @@ footer#footer{
     }
 }
 
+@media screen and (max-width: 800px) {
+    /* booking content */
+    section#booking-content{
+        padding: 4vh;
+        grid-column:  center-start / center-end;
+    }
+
+    .booking-content__title{
+        text-align: center;
+    }
+
+    .booking-content__title::after{
+        width: 20%;
+        left: 40%;
+    }
+    
+    /* booking date */
+    section#booking-date{
+        padding: 4vh;
+        grid-column:  center-start / center-end;
+        grid-gap: 7vh;
+
+    }
+}
 
 /******* 600px *******/
 @media  screen and (max-width: 600px) {
