@@ -605,13 +605,23 @@ footer#footer{
         width: 20%;
         left: 40%;
     }
+
     
     /* booking date */
     section#booking-date{
         padding: 4vh;
         grid-column:  center-start / center-end;
         grid-gap: 7vh;
+    }
 
+    .booking-date__schedule--arraival > div,
+    .booking-date__schedule--departure > div,
+    .booking-date__schedule--guest > div{
+        padding: 2rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: min-content;
+        grid-column-gap: 2vw;
+        place-items: center;
     }
 }
 
@@ -619,5 +629,10 @@ footer#footer{
 @media  screen and (max-width: 600px) {
     .header__logo__content--content__para{
         font-size: 2rem;
+    }
+
+    /* booking content */
+    .booking-content__para{
+        font-size: 2.5rem;
     }
 }
