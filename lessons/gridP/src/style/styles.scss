@@ -630,9 +630,34 @@ footer#footer{
     .header__logo__content--content__para{
         font-size: 2rem;
     }
+    section#booking-date{
+        grid-template-rows: repeat(2, max-content);
+    }
 
+    .booking-date__schedule--arraival > div,
+    .booking-date__schedule--departure > div,
+    .booking-date__schedule--guest > div{
+        padding: 4rem;
+        grid-template-columns: min-content; 
+
+    }
     /* booking content */
     .booking-content__para{
         font-size: 2.5rem;
     }
+}
+
+@media screen and (max-width: 400px){
+    .booking-date__schedule{
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: auto;
+        grid-row-gap: 4vh;
+    }
+
+    .booking-date__contact{
+        // text-align: center;
+        justify-content: center;
+        padding: 0 2rem;
+    }
+    
 }
