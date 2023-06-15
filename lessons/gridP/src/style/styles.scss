@@ -536,13 +536,29 @@ div[class^=villas]:active{
 
 div[class^=villas] h2[class^=villas]{
     font-size: var(--font-size-title);
-    padding: 0 2rem 1rem;
+    padding: 0 2rem 1rem 0;
     font-weight: 400;
     color: white;
     text-transform: uppercase;
 }
 
+div[class^=villas] p[class^=villas]{
+    font-size: 2rem;
+    margin: 1.5rem 0 4rem 0;
+}
 
+div[class^=villas] a[class^=villas]:link,
+div[class^=villas] a[class^=villas]:visited{
+    display: inline-block;
+    margin-bottom: 2rem;
+    background-color: white;
+    color: var(--primary-color);
+
+}
+div[class^=villas] a[class^=villas]:hover,
+div[class^=villas] a[class^=villas]:active{
+    color: white;
+}
 // .villa__villa-1,
 
 
