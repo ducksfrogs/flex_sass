@@ -582,10 +582,18 @@ div[class^=villas] a[class^=villas]:visited::before{
 div[class^=villas] a[class^=villas]:hover::before,
 div[class^=villas] a[class^=villas]:active::before{
     height: 400%;
-
 }
-// .villa__villa-1,
 
+// .villa__villa-1,
+.villas__villa-1{
+    background: linear-gradient(var(--primary-color-m-light), var(--tertiary-color-m-light)), url("../img/img4.jpg");
+    
+}
+
+.booking-content__para,
+div[class^=villas] p[class^=villas]{
+    padding: 0;
+}
 
 section#motto {
     background-color: var(--secondary-color);
