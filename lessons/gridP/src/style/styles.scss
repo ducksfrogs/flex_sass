@@ -598,18 +598,79 @@ div[class^=villas] p[class^=villas]{
 }
 
 section#motto {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     grid-column: container-start / container-end;
-    height: 400px;
+    padding: 10vh 3vw;
 }
+
+.motto__content{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.motto__content--title{
+    font-size: var(--font-size-title);
+    padding: 0 2rem 1rem;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.motto__content--title::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    height: 0.2rem;
+    width: 10%;
+    background-color: white;
+}
+
+
 
 section#events-content{
-    background-color: var(--primary-color);
     grid-column: container-start /col-end 9;
-    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 
 }
 
+
+section#events-content > div {
+    padding: var(--padding-section);
+    display: grid;
+
+    grid-template-areas: "title"
+                        "para";
+                        grid-row-gap: 4vh;
+                        align-items: center;
+    justify-items: start;
+    }
+
+section#events-content > div:first-child{
+    background: linear-gradient(var(--primary-color-m-dark), var(--primary-color-m-light)), url("../img/img3.jpg");
+    border-right: solid;
+}
+
+section#events-content > div:first-child
+section#events-content > div:last-child{
+
+    background-size: cover;
+    background-position: center;
+}
+
+section#events-content > div h2[class*=title]{
+    grid-area: title;
+    font-size: var(--font-size-title);
+    font-weight: 400;
+}
+
+section#events-content > div h2[class*=para]{
+    grid-area: para;
+
+}
 section#events-content{
     background-color: var(--quaternary-color);
     grid-column: container-start / col-end 9;
@@ -730,7 +791,9 @@ footer#footer{
     }
     
     /* booking content */
-    .booking-content__para{
+    .booking-content__para,
+    div[class^=villas] p[class^=villas],
+    .motto__content--para{
         font-size: 1.5rem;
     }
 
@@ -747,6 +810,10 @@ footer#footer{
         // text-align: center;
         justify-content: center;
         padding: 0 2rem;
+    }
+
+    section#villas{
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     }
     
 }
