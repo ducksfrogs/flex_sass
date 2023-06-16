@@ -709,7 +709,7 @@ footer#footer{
 }
 
 /******* 600px *******/
-@media  screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
     .header__logo__content--content__para{
         font-size: 2rem;
     }
@@ -722,16 +722,16 @@ footer#footer{
     .booking-date__schedule--guest > div{
         padding: 4rem;
         grid-template-columns: min-content; 
-
     }
 
     div[class^=villas] p[class^=villas]{
         font-size: 2rem;
         margin: 1.5rem 0 4rem 0;
     }
+    
     /* booking content */
     .booking-content__para{
-        font-size: 2.5rem;
+        font-size: 1.5rem;
     }
 
 }
