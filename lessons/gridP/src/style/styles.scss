@@ -524,8 +524,8 @@ section#villas {
 
 div[class^=villas]{
     padding: 2rem;
-    // background-position: center;
-    // background-size: cover;
+    background-position: center;
+    background-size: cover;
     transition: transform var(--transition-duration) ease-in-out;
 }
 
@@ -587,7 +587,9 @@ div[class^=villas] a[class^=villas]:active::before{
 // .villa__villa-1,
 .villas__villa-1{
     background: linear-gradient(var(--primary-color-m-light), var(--tertiary-color-m-light)), url("../img/img4.jpg");
-    
+}
+.villas__villa-2{
+    background: linear-gradient(var(--primary-color-m-light), var(--tertiary-color-m-light)), url("../img/img4.jpg");
 }
 
 .booking-content__para,
@@ -700,6 +702,10 @@ footer#footer{
         grid-column-gap: 2vw;
         place-items: center;
     }
+
+    section#villas{
+        grid-gap: 0;
+    }
 }
 
 /******* 600px *******/
@@ -718,10 +724,16 @@ footer#footer{
         grid-template-columns: min-content; 
 
     }
+
+    div[class^=villas] p[class^=villas]{
+        font-size: 2rem;
+        margin: 1.5rem 0 4rem 0;
+    }
     /* booking content */
     .booking-content__para{
         font-size: 2.5rem;
     }
+
 }
 
 @media screen and (max-width: 400px){
