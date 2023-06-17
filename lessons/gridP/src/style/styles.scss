@@ -644,17 +644,22 @@ section#events-content > div {
 
     grid-template-areas: "title"
                         "para";
-                        grid-row-gap: 4vh;
-                        align-items: center;
+    grid-row-gap: 4vh;
+    align-items: center;
     justify-items: start;
     }
 
 section#events-content > div:first-child{
-    background: linear-gradient(var(--primary-color-m-dark), var(--primary-color-m-light)), url("../img/img3.jpg");
-    border-right: solid;
+    background: linear-gradient(var(--primary-color-m-dark), var(--primary-color-m-light)), url("../img/img4.jpg");
+    border-right: solid 0.2rem var(--tertiary-color);
 }
 
-section#events-content > div:first-child
+section#events-content > div:last-child{
+    background: linear-gradient(var(--primary-color-m-dark), var(--primary-color-m-light)), url("../img/img4.jpg");
+    border-left: solid 0.2rem var(--tertiary-color);
+}
+
+section#events-content > div:first-child,
 section#events-content > div:last-child{
 
     background-size: cover;
@@ -676,7 +681,7 @@ section#events-content{
     grid-column: container-start / col-end 9;
 }
 
-section#events-date{
+section#events-text{
     background-color: var(--primary-color);
     grid-column: col-start 10 / center-end;
 }
@@ -785,6 +790,13 @@ footer#footer{
         grid-template-columns: min-content; 
     }
 
+    section#events-text{
+        display: none;
+    }
+
+    section#events-content {
+        grid-column: center-start / center-end ;
+    }
     div[class^=villas] p[class^=villas]{
         font-size: 3rem;
         margin: 1.5rem 0 4rem 0;
@@ -795,6 +807,11 @@ footer#footer{
     div[class^=villas] p[class^=villas],
     .motto__content--para{
         font-size: 1.5rem;
+    }
+
+    section#events-content > div:first-child,
+    section#events-content > div:last-child{
+        border: none;
     }
 
 }
