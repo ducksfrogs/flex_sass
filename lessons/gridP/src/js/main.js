@@ -38,26 +38,23 @@ const imgWidth = imgs[0].getBoundingClientRect().width;
 	// 	img.style.left = imgWidth * index + 'px';
 	// }
 
-
 const setImgPosition = (img, index) => {
 	img.style.left = imgWidth * index + 'px';
-}
+};
 
 imgs.forEach(setImgPosition);
 
+const moveToImg = (list, currentImg, targetImg) => {
+	list.style.transform = 'translateX(-' + targetImg.style.left + ')';
+	currentImg.classList.remove('current--img');
+	targetImg.classList.add('current--img');
+};
+
 nextButton.addEventListener('click', (e) =>{
 	const currentImg = list.querySelector('.current--img');
-
 	const nextImg = currentImg.nextElementSibling;
-	// console.log(nextImg);
 
-	const distToMove = nextImg.style.left;
-	console.log(distToMove);
-
-	list.style.transform = 'translateX(-' + distToMove + ')';
-
-	currentImg.classList.remove('current--img');
-	nextImg.classList.add('current--img');
-
+	moveToImg(list, currentImg, nextImg)
 
 });
+
