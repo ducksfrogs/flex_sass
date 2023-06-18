@@ -7,7 +7,7 @@ import glob
 dst_dir = 'data/temp/images_half'
 os.makedirs(dst_dir, exist_ok=True)
 
-files = glob.glob('./data/temp/images/*.jpg')
+files = glob.glob('./data/img/*.jpg')
 
 for f in files:
     img = Image.open(f)
