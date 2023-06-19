@@ -30,6 +30,7 @@ const prevButton = document.querySelector('.gallery-carousel__btn--left');
 const carouselNav = document.querySelector('.gallery-carousel__nav');
 const dots = Array.from(carouselNav.children);
 
+
 const imgWidth = imgs[0].getBoundingClientRect().width;
 const setImgPosition = (img, index) => {
 	img.style.left = imgWidth * index + 'px';
@@ -47,25 +48,43 @@ const updateDot = (currentDot, targetDot) => {
 	targetDot.classList.add('current--img');
 };
 
+const hideShowArrows = (imgs, prevButton, nextButton, targetIndx) => {
+	if (targetIndx === 0) {
+		prevButton.classList.add('hidden');
+		nextButton.classList.remove('hidden');
+	} else if (targetIndx === imgs.length -1) {
+		prevButton.classList.remove('hidden');
+		nextButton.classList.add('hidden');
+		
+	} else {
+		prevButton.classList.remove('hidden');
+		nextButton.classList.remove('hidden');
+	};
+};
+
 nextButton.addEventListener('click', (e) =>{
 	const currentImg = list.querySelector('.current--img');
 	const nextImg = currentImg.nextElementSibling;
+	const nextIndx = imgs.findIndex((img) => img === nextImg);
 
 	const currentDot = carouselNav.querySelector(".current--img");
 	const nextDot = currentDot.nextElementSibling;
 
 	moveToImg(list, currentImg, nextImg);
 	updateDot(currentDot, nextDot);
+	hideShowArrows(imgs, prevButton, nextButton, nextIndx);
 });
 
 prevButton.addEventListener('click', (e) =>{
 	const currentImg = list.querySelector('.current--img');
 	const prevImg = currentImg.previousElementSibling;
+	const prevIndx = imgs.findIndex((img) => img === prevImg);
 
 	const currentDot = carouselNav.querySelector(".current--img");
 	const prevDot = currentDot.previousElementSibling;
 	moveToImg(list, currentImg, prevImg);
 	updateDot(currentDot, prevDot);
+	hideShowArrows(imgs, prevButton, nextButton, prevIndx);
 });
 
 carouselNav.addEventListener('click', (e) => {
@@ -84,7 +103,7 @@ carouselNav.addEventListener('click', (e) => {
 	const targetImg = imgs[targetIndx]
 
 	moveToImg(list, currentImg, targetImg);
-
 	updateDot(currentDot, targetDot);
+	hideShowArrows(imgs, prevButton, nextButton, targetIndx);
 
 });

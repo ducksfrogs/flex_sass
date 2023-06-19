@@ -801,6 +801,9 @@ div.gallery-carousel__img-container{
 
 }
 
+.hidden{
+    display: none;
+}
 section#features-content{
     background-color: var(--quaternary-color);
     grid-column: container-start / col-end 9;
