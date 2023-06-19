@@ -30,13 +30,11 @@ const prevButton = document.querySelector('.gallery-carousel__btn--left');
 const carouselNav = document.querySelector('.gallery-carousel__nav');
 const dots = Array.from(carouselNav.children);
 
-
 const imgWidth = imgs[0].getBoundingClientRect().width;
 const setImgPosition = (img, index) => {
 	img.style.left = imgWidth * index + 'px';
 };
 imgs.forEach(setImgPosition);
-
 
 const moveToImg = (list, currentImg, targetImg) => {
 	list.style.transform = 'translateX(-' + targetImg.style.left + ')';
@@ -44,18 +42,30 @@ const moveToImg = (list, currentImg, targetImg) => {
 	targetImg.classList.add('current--img');
 };
 
+const updateDot = (currentDot, targetDot) => {
+	currentDot.classList.remove('current--img');
+	targetDot.classList.add('current--img');
+};
+
 nextButton.addEventListener('click', (e) =>{
 	const currentImg = list.querySelector('.current--img');
 	const nextImg = currentImg.nextElementSibling;
 
-	moveToImg(list, currentImg, nextImg)
+	const currentDot = carouselNav.querySelector(".current--img");
+	const nextDot = currentDot.nextElementSibling;
+
+	moveToImg(list, currentImg, nextImg);
+	updateDot(currentDot, nextDot);
 });
 
 prevButton.addEventListener('click', (e) =>{
 	const currentImg = list.querySelector('.current--img');
 	const prevImg = currentImg.previousElementSibling;
 
-	moveToImg(list, currentImg, prevImg)
+	const currentDot = carouselNav.querySelector(".current--img");
+	const prevDot = currentDot.previousElementSibling;
+	moveToImg(list, currentImg, prevImg);
+	updateDot(currentDot, prevDot);
 });
 
 carouselNav.addEventListener('click', (e) => {
@@ -75,7 +85,6 @@ carouselNav.addEventListener('click', (e) => {
 
 	moveToImg(list, currentImg, targetImg);
 
-
-
+	updateDot(currentDot, targetDot);
 
 });
